@@ -2,7 +2,7 @@
 import { COOKIE_CONSENT, CookieClient } from '@/utils/cookie'
 import { useState, useEffect } from 'react'
 import { Open_Sans } from 'next/font/google'
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
 import Cookies from '@/components/atoms/svg/cookies'
 
 export const openSans = Open_Sans({ subsets: ['latin'] })
@@ -46,57 +46,57 @@ export default function CookiesModal({ translations }: CookiesModalProps) {
 
   return (
     showModal && (
-      <div className="fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl bg-mate_black px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
+      <div className="bg-mate_black fixed bottom-0 left-0 z-40 flex h-fit w-fit flex-col justify-between gap-6 rounded-t-3xl px-6 py-10 backdrop-blur-sm md:bottom-4 md:left-4 md:rounded-3xl">
         <div className="flex h-fit w-full flex-col gap-10 md:max-w-[300px]">
           {/* Title + description */}
           <div className="flex h-fit w-full flex-col gap-5 text-center">
             <div className="flex items-center justify-center gap-4">
               {/* Title */}
-              <PoppinsText
+              <Playfair_DisplayText
                 fontSize="32px"
                 style="semibold"
-                className="max-w-[500px] text-center text-gold"
+                className="text-gold max-w-[500px] text-center"
               >
                 {translations.title}
-              </PoppinsText>
+              </Playfair_DisplayText>
               <Cookies />
             </div>
             {/* Description */}
             <div className="flex h-fit w-full flex-col gap-4">
-              <PoppinsText
+              <Playfair_DisplayText
                 fontSize="14px"
                 style="semibold"
-                className="max-w-[500px] text-center text-gold"
+                className="text-gold max-w-[500px] text-center"
               >
                 {translations.message}
-              </PoppinsText>
+              </Playfair_DisplayText>
             </div>
           </div>
           {/* Buttons */}
           <div className="flex h-fit w-full flex-row justify-center gap-5">
             {/* Decline */}
             <button
-              className="flex h-fit flex-col items-center justify-center border border-white px-3 py-2 text-white hover:bg-gold md:px-9 md:py-3"
+              className="hover:bg-gold flex h-fit flex-col items-center justify-center border border-white px-3 py-2 text-white md:px-9 md:py-3"
               onClick={handleCancelCookie}
             >
-              <PoppinsText
+              <Playfair_DisplayText
                 fontSize="14px"
                 className="max-w-[500px] text-center"
               >
                 {translations.reject}
-              </PoppinsText>
+              </Playfair_DisplayText>
             </button>
             {/* Accept */}
             <button
-              className="flex h-fit flex-col items-center justify-center border border-white bg-black px-3 py-2 text-white hover:bg-gold md:px-9 md:py-3"
+              className="hover:bg-gold flex h-fit flex-col items-center justify-center border border-white bg-black px-3 py-2 text-white md:px-9 md:py-3"
               onClick={handleAcceptCookie}
             >
-              <PoppinsText
+              <Playfair_DisplayText
                 fontSize="14px"
                 className="max-w-[500px] text-center"
               >
                 {translations.accept}
-              </PoppinsText>
+              </Playfair_DisplayText>
             </button>
           </div>
         </div>

@@ -1,6 +1,6 @@
 'use client'
 import { getTranslations } from 'next-intl/server'
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import { Link } from '@/i18n/routing'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'

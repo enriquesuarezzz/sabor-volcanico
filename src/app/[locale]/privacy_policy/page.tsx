@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server'
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { PoppinsText } from '@/components/atoms/playfair_display_text'
 export async function generateMetadata() {
   const t = await getTranslations('privacy_policy_page')
 
@@ -123,7 +123,7 @@ export default async function PrivacyPolicyPage() {
         <a
           href="https://www.aepd.es/"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           Agencia Española de Protección de Datos.
         </a>

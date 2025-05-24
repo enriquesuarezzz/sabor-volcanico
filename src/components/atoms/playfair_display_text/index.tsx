@@ -1,13 +1,13 @@
 'use client'
-import { Poppins } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
 import { forwardRef } from 'react'
 
-export const poppins = Poppins({
+export const playfair_Display = Playfair_Display({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700'],
+  weight: ['400', '600', '700'],
 })
 
-export interface PoppinsTextProps {
+export interface Playfair_DisplayTextProps {
   children: React.ReactNode // Allow JSX as children
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
@@ -26,9 +26,9 @@ export interface PoppinsTextProps {
   className?: string
 }
 
-export const PoppinsText = forwardRef<
+export const Playfair_DisplayText = forwardRef<
   HTMLHeadingElement | HTMLParagraphElement,
-  PoppinsTextProps
+  Playfair_DisplayTextProps
 >(
   (
     {
@@ -96,7 +96,7 @@ export const PoppinsText = forwardRef<
       }
     }
 
-    const globalStyle = `${poppins.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
+    const globalStyle = `${playfair_Display.className} ${getSize()} ${getLeading()} ${getStyle()} antialiased`
 
     function getTag() {
       switch (tag) {
@@ -149,4 +149,4 @@ export const PoppinsText = forwardRef<
   },
 )
 
-PoppinsText.displayName = 'PoppinsText'
+Playfair_DisplayText.displayName = 'Playfair_DisplayText'
