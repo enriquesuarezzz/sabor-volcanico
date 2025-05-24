@@ -1,5 +1,5 @@
 'use client'
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
 import { Link } from '@/i18n/routing'
 import LocaleSwitcher from '../locale_switcher/locale_switcher'
 import Cart from '@/components/atoms/svg/cart'
@@ -66,34 +66,34 @@ export default function NavBar({ translations }: NavBarProps) {
       />
       <div className="hidden items-center gap-10 md:flex">
         <Link href="/">
-          <PoppinsText
+          <Playfair_DisplayText
             tag="h1"
             fontSize="16px"
             style="bold"
-            className="relative mx-auto block w-fit text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+            className="relative mx-auto block w-fit font-display text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.home}
-          </PoppinsText>
+          </Playfair_DisplayText>
         </Link>
         <Link href="/about_us">
-          <PoppinsText
+          <Playfair_DisplayText
             tag="h1"
             fontSize="16px"
             style="bold"
             className="relative mx-auto block w-fit text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.about_us}
-          </PoppinsText>
+          </Playfair_DisplayText>
         </Link>
         <Link href="/products">
-          <PoppinsText
+          <Playfair_DisplayText
             tag="h1"
             fontSize="16px"
             style="bold"
             className="relative mx-auto block w-fit text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.products}
-          </PoppinsText>
+          </Playfair_DisplayText>
         </Link>
         <SearchBar
           searchPlaceholder={translations.search_bar.search_placeholder}
@@ -116,20 +116,20 @@ export default function NavBar({ translations }: NavBarProps) {
             ✖
           </button>
           <div className="flex h-full flex-col p-4">
-            <PoppinsText
+            <Playfair_DisplayText
               tag="h1"
               fontSize="19px"
               className="mx-auto mt-2 w-fit text-black"
             >
               {translations.cart.title}
-            </PoppinsText>
+            </Playfair_DisplayText>
 
             <hr className="my-3 border-gray-300 lg:my-4" />
 
             {cartItems.length === 0 ? (
-              <PoppinsText tag="h1" fontSize="16px" style="bold">
+              <Playfair_DisplayText tag="h1" fontSize="16px" style="bold">
                 {translations.cart.empty}
-              </PoppinsText>
+              </Playfair_DisplayText>
             ) : (
               <ul className="flex-1 overflow-y-auto">
                 {cartItems.map((item) => (
@@ -146,34 +146,34 @@ export default function NavBar({ translations }: NavBarProps) {
                       className="mr-4 rounded-md object-contain"
                     />
                     <div className="flex flex-col items-center justify-center gap-4">
-                      <PoppinsText
+                      <Playfair_DisplayText
                         tag="h1"
                         fontSize="16px"
                         className="text-center"
                       >
                         {item.name}
-                      </PoppinsText>
-                      <PoppinsText tag="h1" fontSize="16px">
+                      </Playfair_DisplayText>
+                      <Playfair_DisplayText tag="h1" fontSize="16px">
                         {translations.cart.quantity} {item.quantity}
-                      </PoppinsText>
+                      </Playfair_DisplayText>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
-                      <PoppinsText tag="h1" fontSize="16px">
+                      <Playfair_DisplayText tag="h1" fontSize="16px">
                         {item.price} €
-                      </PoppinsText>
+                      </Playfair_DisplayText>
                       <button
                         onClick={() => removeFromCart(item.id)}
                         aria-label="Remove from Cart"
                         className="flex items-center justify-center space-x-2"
                       >
                         <Delete />
-                        <PoppinsText
+                        <Playfair_DisplayText
                           tag="h1"
                           fontSize="16px"
                           className="text-red-500"
                         >
                           {translations.cart.remove}
-                        </PoppinsText>
+                        </Playfair_DisplayText>
                       </button>
                     </div>
                   </li>
@@ -184,12 +184,20 @@ export default function NavBar({ translations }: NavBarProps) {
             {/* Total Price and Continue to Cart Button */}
             <div className="mb-6 mt-4 border-t pt-4">
               <div className="flex justify-between">
-                <PoppinsText tag="h1" fontSize="16px" className="font-bold">
+                <Playfair_DisplayText
+                  tag="h1"
+                  fontSize="16px"
+                  className="font-bold"
+                >
                   {translations.cart.subtotal}
-                </PoppinsText>
-                <PoppinsText tag="h1" fontSize="16px" className="font-bold">
+                </Playfair_DisplayText>
+                <Playfair_DisplayText
+                  tag="h1"
+                  fontSize="16px"
+                  className="font-bold"
+                >
                   {formattedTotalPrice} €
-                </PoppinsText>
+                </Playfair_DisplayText>
               </div>
 
               {/* Continue to Cart Button */}
@@ -199,9 +207,13 @@ export default function NavBar({ translations }: NavBarProps) {
                   onClick={() => setIsCartOpen(false)}
                   aria-label="Continue to Cart"
                 >
-                  <PoppinsText tag="h1" fontSize="16px" className="text-white">
+                  <Playfair_DisplayText
+                    tag="h1"
+                    fontSize="16px"
+                    className="text-white"
+                  >
                     {translations.cart.title}
-                  </PoppinsText>
+                  </Playfair_DisplayText>
                 </button>
               </Link>
             </div>
