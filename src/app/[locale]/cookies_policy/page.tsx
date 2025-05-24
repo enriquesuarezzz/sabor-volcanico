@@ -1,4 +1,4 @@
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata() {
@@ -335,7 +335,7 @@ export default async function CookiesPolicyPage() {
         <a
           href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we
         </a>
@@ -343,7 +343,7 @@ export default async function CookiesPolicyPage() {
         <a
           href="https://support.google.com/chrome/bin/answer.py?hl=es&answer=95647"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           https://support.google.com/chrome/bin/answer.py?hl=es&answer=95647
         </a>
@@ -351,7 +351,7 @@ export default async function CookiesPolicyPage() {
         <a
           href="https://windows.microsoft.com/es-es/internet-explorer/delete-manage-cookies#ie=ie-10"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           https://windows.microsoft.com/es-es/internet-explorer/delete-manage-cookies#ie=ie-10
         </a>
@@ -359,7 +359,7 @@ export default async function CookiesPolicyPage() {
         <a
           href="https://support.apple.com/kb/ph5042"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           https://support.apple.com/kb/ph5042
         </a>
@@ -367,7 +367,7 @@ export default async function CookiesPolicyPage() {
         <a
           href="https://help.opera.com/Windows/11.50/es-ES/cookies.html"
           target="_blank"
-          className="text-gray-600 hover:text-hover_gold"
+          className="hover:text-hover_gold text-gray-600"
         >
           https://help.opera.com/Windows/11.50/es-ES/cookies.html
         </a>

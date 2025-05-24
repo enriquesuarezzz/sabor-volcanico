@@ -3,7 +3,7 @@ import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import { Product } from '../../../../types/products'
 import { getProducts } from '../../../../lib/firestore'
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import { useEffect, useState } from 'react'
 
 export default function Products({

@@ -1,4 +1,4 @@
-import { PoppinsText } from '@/components/atoms/poppins_text'
+import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
