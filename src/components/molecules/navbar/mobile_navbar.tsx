@@ -2,13 +2,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link } from '@/i18n/routing'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
+
 import Cart from '@/components/atoms/svg/cart'
 import Spanish from '@/components/atoms/svg/spanish'
 import English from '@/components/atoms/svg/english'
 import SearchBar from '../search_bar/search_bar'
 import Menu from '@/components/atoms/svg/menu'
 import { Close } from '@/components/atoms/svg/close'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 interface MobileMenuProps {
   translations: {
@@ -71,49 +72,49 @@ export function MobileMenu({ translations, setIsCartOpen }: MobileMenuProps) {
           </button>
           <nav className="flex flex-col items-center gap-6">
             <Link href="/" onClick={() => handleNavigation('/')}>
-              <PoppinsText
+              <BarlowText
                 tag="h1"
                 fontSize="32px"
                 style="bold"
                 className="text-white hover:scale-110"
               >
                 {translations.home}
-              </PoppinsText>
+              </BarlowText>
             </Link>
             <Link
               href="/about_us"
               onClick={() => handleNavigation('/about_us')}
             >
-              <PoppinsText
+              <BarlowText
                 tag="h1"
                 fontSize="32px"
                 style="bold"
                 className="text-white hover:scale-110"
               >
                 {translations.about_us}
-              </PoppinsText>
+              </BarlowText>
             </Link>
             <Link
               href="/products"
               onClick={() => handleNavigation('/products')}
             >
-              <PoppinsText
+              <BarlowText
                 tag="h1"
                 fontSize="32px"
                 style="bold"
                 className="text-white hover:scale-110"
               >
                 {translations.products}
-              </PoppinsText>
+              </BarlowText>
             </Link>
-            <PoppinsText
+            <BarlowText
               tag="h1"
               fontSize="32px"
               style="bold"
               className="text-white hover:scale-110"
             >
               {translations.select_language}
-            </PoppinsText>
+            </BarlowText>
             <div className="flex items-center space-x-4">
               <button
                 aria-label="Change language to Spanish"

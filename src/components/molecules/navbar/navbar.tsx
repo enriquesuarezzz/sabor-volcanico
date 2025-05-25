@@ -1,5 +1,5 @@
 'use client'
-import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
+import { BarlowText } from '@/components/atoms/barlow_text'
 import { Link } from '@/i18n/routing'
 import LocaleSwitcher from '../locale_switcher/locale_switcher'
 import Cart from '@/components/atoms/svg/cart'
@@ -45,7 +45,7 @@ export default function NavBar({ translations }: NavBarProps) {
   return (
     <div className="fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-b-3xl bg-[#f8f7f7] px-6 py-4 text-white md:px-20">
       <Link href="/">
-        <Image src="/images/logo.avif" alt="Logo" width={50} height={50} />
+        <Image src="/images/logo.avif" alt="Logo" width={80} height={80} />
       </Link>
       <MobileMenu
         translations={{
@@ -66,34 +66,31 @@ export default function NavBar({ translations }: NavBarProps) {
       />
       <div className="hidden items-center gap-10 md:flex">
         <Link href="/">
-          <Playfair_DisplayText
+          <BarlowText
             tag="h1"
-            fontSize="16px"
-            style="bold"
-            className="relative mx-auto block w-fit font-display text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+            fontSize="19px"
+            className="relative mx-auto block w-fit font-display text-gray-700 after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.home}
-          </Playfair_DisplayText>
+          </BarlowText>
         </Link>
         <Link href="/about_us">
-          <Playfair_DisplayText
+          <BarlowText
             tag="h1"
-            fontSize="16px"
-            style="bold"
-            className="relative mx-auto block w-fit text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+            fontSize="19px"
+            className="relative mx-auto block w-fit text-gray-700 after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.about_us}
-          </Playfair_DisplayText>
+          </BarlowText>
         </Link>
         <Link href="/products">
-          <Playfair_DisplayText
+          <BarlowText
             tag="h1"
-            fontSize="16px"
-            style="bold"
-            className="relative mx-auto block w-fit text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
+            fontSize="19px"
+            className="relative mx-auto block w-fit text-gray-700 after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:bg-[#ccb32b] after:transition after:duration-300 after:content-[''] after:hover:scale-x-100"
           >
             {translations.products}
-          </Playfair_DisplayText>
+          </BarlowText>
         </Link>
         <SearchBar
           searchPlaceholder={translations.search_bar.search_placeholder}
@@ -116,20 +113,20 @@ export default function NavBar({ translations }: NavBarProps) {
             ✖
           </button>
           <div className="flex h-full flex-col p-4">
-            <Playfair_DisplayText
+            <BarlowText
               tag="h1"
               fontSize="19px"
               className="mx-auto mt-2 w-fit text-black"
             >
               {translations.cart.title}
-            </Playfair_DisplayText>
+            </BarlowText>
 
             <hr className="my-3 border-gray-300 lg:my-4" />
 
             {cartItems.length === 0 ? (
-              <Playfair_DisplayText tag="h1" fontSize="16px" style="bold">
+              <BarlowText tag="h1" fontSize="16px" style="bold">
                 {translations.cart.empty}
-              </Playfair_DisplayText>
+              </BarlowText>
             ) : (
               <ul className="flex-1 overflow-y-auto">
                 {cartItems.map((item) => (
@@ -146,34 +143,34 @@ export default function NavBar({ translations }: NavBarProps) {
                       className="mr-4 rounded-md object-contain"
                     />
                     <div className="flex flex-col items-center justify-center gap-4">
-                      <Playfair_DisplayText
+                      <BarlowText
                         tag="h1"
                         fontSize="16px"
                         className="text-center"
                       >
                         {item.name}
-                      </Playfair_DisplayText>
-                      <Playfair_DisplayText tag="h1" fontSize="16px">
+                      </BarlowText>
+                      <BarlowText tag="h1" fontSize="16px">
                         {translations.cart.quantity} {item.quantity}
-                      </Playfair_DisplayText>
+                      </BarlowText>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-2">
-                      <Playfair_DisplayText tag="h1" fontSize="16px">
+                      <BarlowText tag="h1" fontSize="16px">
                         {item.price} €
-                      </Playfair_DisplayText>
+                      </BarlowText>
                       <button
                         onClick={() => removeFromCart(item.id)}
                         aria-label="Remove from Cart"
                         className="flex items-center justify-center space-x-2"
                       >
                         <Delete />
-                        <Playfair_DisplayText
+                        <BarlowText
                           tag="h1"
                           fontSize="16px"
                           className="text-red-500"
                         >
                           {translations.cart.remove}
-                        </Playfair_DisplayText>
+                        </BarlowText>
                       </button>
                     </div>
                   </li>
@@ -184,20 +181,12 @@ export default function NavBar({ translations }: NavBarProps) {
             {/* Total Price and Continue to Cart Button */}
             <div className="mb-6 mt-4 border-t pt-4">
               <div className="flex justify-between">
-                <Playfair_DisplayText
-                  tag="h1"
-                  fontSize="16px"
-                  className="font-bold"
-                >
+                <BarlowText tag="h1" fontSize="16px" className="font-bold">
                   {translations.cart.subtotal}
-                </Playfair_DisplayText>
-                <Playfair_DisplayText
-                  tag="h1"
-                  fontSize="16px"
-                  className="font-bold"
-                >
+                </BarlowText>
+                <BarlowText tag="h1" fontSize="16px" className="font-bold">
                   {formattedTotalPrice} €
-                </Playfair_DisplayText>
+                </BarlowText>
               </div>
 
               {/* Continue to Cart Button */}
@@ -207,13 +196,9 @@ export default function NavBar({ translations }: NavBarProps) {
                   onClick={() => setIsCartOpen(false)}
                   aria-label="Continue to Cart"
                 >
-                  <Playfair_DisplayText
-                    tag="h1"
-                    fontSize="16px"
-                    className="text-white"
-                  >
+                  <BarlowText tag="h1" fontSize="16px" className="text-white">
                     {translations.cart.title}
-                  </Playfair_DisplayText>
+                  </BarlowText>
                 </button>
               </Link>
             </div>
