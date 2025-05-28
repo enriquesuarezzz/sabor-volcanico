@@ -1,11 +1,14 @@
 {
   "home_page": {
-    "meta_title": "Inicio - DcWine",
+    "meta_title": "Inicio - Sabor Volcánico",
     "meta_description": "Bienvenido a DcWine, tu plataforma de confianza para descubrir y comprar los mejores vinos, directamente desde las mejores bodegas.",
     "header": {
-      "title": "DCWine",
-      "subtitle": "Un gran vino es un gran arte, amigo mío. Y DCWine es en efecto, un pastor... cuya misión  es ofrecer  al público  otra forma de gran arte y  orientar su apreciación.",
-      "button": "Compra ahora"
+      "title": "Sabores auténticos de Canarias",
+      "subtitle": "Un pedacito de Canarias",
+      "subtitle2": "estés donde estés",
+      "description": "La mejor selección de comida canaria, lista para compartir y disfrutar. Descubre los sabores auténticos de nuestras islas, elaborados con tradición y cariño, y disponibles dondequiera que estés.",
+      "products_button": "Explorar productos",
+      "about_us_button": "Sobre nosotros"
     },
     "top_selling_products": {
       "title": "Descubre nuestros productos más vendidos",

@@ -2,8 +2,6 @@ import { Link } from '@/i18n/routing'
 import { getTranslations } from 'next-intl/server'
 import Instagram from '@/components/atoms/svg/instagram'
 import Facebook from '@/components/atoms/svg/facebook'
-import Phone from '@/components/atoms/svg/phone'
-import Whatsapp from '@/components/atoms/svg/whatsapp'
 import Image from 'next/image'
 import { BarlowText } from '@/components/atoms/barlow_text'
 
