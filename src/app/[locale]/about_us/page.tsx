@@ -1,4 +1,5 @@
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
+import { BarlowText } from '@/components/atoms/barlow_text'
+import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
@@ -15,16 +16,16 @@ export default async function AboutUs() {
   return (
     <section className="flex w-full flex-col items-center justify-center">
       <div className="flex w-full flex-col items-center justify-center gap-4 px-10 pb-10 pt-24 md:gap-8 md:pb-16 md:pt-36 lg:flex-row lg:gap-8">
-        <PoppinsText
+        <Playfair_DisplayText
           fontSize="44px"
           style="bold"
           className="max-w-[900px] text-center lg:max-w-[700px]"
         >
           {t('title')}
-        </PoppinsText>
-        <PoppinsText fontSize="14px" className="max-w-[500px] text-center">
+        </Playfair_DisplayText>
+        <BarlowText fontSize="14px" className="max-w-[500px] text-center">
           {t('subtitle')}
-        </PoppinsText>
+        </BarlowText>
       </div>
       <div className="w-full">
         <Image
@@ -36,20 +37,20 @@ export default async function AboutUs() {
         />
       </div>
       <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-16">
-        <PoppinsText fontSize="16px" className="">
+        <BarlowText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
               __html: t('first_paragraph'),
             }}
           />
-        </PoppinsText>
-        <PoppinsText fontSize="16px" className="">
+        </BarlowText>
+        <BarlowText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
               __html: t('second_paragraph'),
             }}
           />
-        </PoppinsText>
+        </BarlowText>
       </div>
       <Image
         src="/images/about_us_image_1.avif"
@@ -58,13 +59,13 @@ export default async function AboutUs() {
         height={600}
         className="h-full max-h-[600px] w-full object-cover px-0 pt-10 md:px-20 md:pt-16"
       />
-      <PoppinsText fontSize="16px" className="mx-4 pt-10 md:mx-20 md:pt-16">
+      <BarlowText fontSize="16px" className="mx-4 pt-10 md:mx-20 md:pt-16">
         <span
           dangerouslySetInnerHTML={{
             __html: t('last_paragraph'),
           }}
         />
-      </PoppinsText>
+      </BarlowText>
     </section>
   )
 }
