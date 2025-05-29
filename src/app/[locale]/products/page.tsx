@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import Products from '@/components/molecules/products/products'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 export async function generateMetadata() {
   const t = await getTranslations('products_page')
@@ -31,9 +31,9 @@ export default async function ProductsPage() {
   return (
     <div className="mx-6 flex flex-col justify-center pt-24 md:mx-20">
       {/* title */}
-      <PoppinsText fontSize="56px" style="bold" className="max-w-[500px]">
+      <BarlowText fontSize="56px" style="bold" className="max-w-[500px]">
         {t('title')}
-      </PoppinsText>
+      </BarlowText>
       {/* products */}
       <Products translations={translations} />
     </div>
