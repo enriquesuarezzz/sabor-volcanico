@@ -1,7 +1,8 @@
-import { ShoppingCart, Search } from 'lucide-react'
+import { ShoppingCart } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
 import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/routing'
 
 export default async function Header() {
   const t = await getTranslations('home_page.header')
@@ -29,18 +30,22 @@ export default async function Header() {
             <div className="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:text-left">
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
-                  <Button className="flex h-auto w-full items-center justify-center rounded-2xl border border-transparent bg-canary-blue px-8 py-6 text-base font-medium text-white hover:bg-canary-blue-dark">
-                    <ShoppingCart className="mr-2 h-5 w-5" />
-                    {t('products_button')}
-                  </Button>
+                  <Link href="/products">
+                    <Button className="flex h-auto w-full items-center justify-center rounded-2xl border border-transparent bg-canary-blue px-8 py-6 text-base font-medium text-white hover:bg-canary-blue-dark">
+                      <ShoppingCart className="mr-2 h-5 w-5" />
+                      {t('products_button')}
+                    </Button>
+                  </Link>
                 </div>
                 <div className="mt-3 sm:ml-3 sm:mt-0">
-                  <Button
-                    variant="outline"
-                    className="flex h-auto w-full items-center justify-center rounded-2xl border-canary-yellow px-8 py-6 text-base font-medium text-canary-blue hover:bg-canary-yellow/10"
-                  >
-                    {t('about_us_button')}
-                  </Button>
+                  <Link href="/about_us">
+                    <Button
+                      variant="outline"
+                      className="flex h-auto w-full items-center justify-center rounded-2xl border-canary-yellow px-8 py-6 text-base font-medium text-canary-blue hover:bg-canary-yellow/10"
+                    >
+                      {t('about_us_button')}
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
