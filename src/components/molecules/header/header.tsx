@@ -12,10 +12,10 @@ export default async function Header() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
             <h1>
-              <span className="mb-3 block text-base font-semibold uppercase tracking-wide text-canary-blue sm:text-lg lg:text-base xl:text-lg">
+              <span className="mb-3 block text-base font-semibold uppercase tracking-wide text-canary-blue sm:text-lg lg:text-base xl:text-base">
                 {t('title')}
               </span>
-              <span className="mt-1 block font-display text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-5xl">
+              <span className="mt-1 block font-display text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-4xl">
                 <span className="block text-canary-blue-dark">
                   {t('subtitle')}
                 </span>
@@ -24,7 +24,7 @@ export default async function Header() {
                 </span>
               </span>
             </h1>
-            <p className="mt-5 text-base text-gray-600 sm:mt-7 sm:text-xl lg:text-lg xl:text-xl">
+            <p className="mt-5 text-base text-gray-600 sm:mt-7 sm:text-xl lg:text-lg xl:text-lg">
               {t('description')}
             </p>
             <div className="mt-8 sm:mx-auto sm:max-w-lg sm:text-center lg:text-left">

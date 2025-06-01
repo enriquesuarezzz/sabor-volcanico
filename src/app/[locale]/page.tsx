@@ -14,11 +14,27 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  const t = await getTranslations('age_verification_pop_up')
+  const ageVerificationT = await getTranslations('age_verification_pop_up')
+  const categoriesT = await getTranslations('home_page.categories')
+
+  const categoriesTranslations = {
+    title: categoriesT('title'),
+    allCategories: categoriesT('allCategories'),
+    aloeVera: categoriesT('aloeVera'),
+    sweets: categoriesT('sweets'),
+    gofio: categoriesT('gofio'),
+    drinks: categoriesT('drinks'),
+    sauces: categoriesT('sauces'),
+    potatoesAndSweetPotatoes: categoriesT('potatoesAndSweetPotatoes'),
+    rumAndLiquors: categoriesT('rumAndLiquors'),
+    cheeses: categoriesT('cheeses'),
+    wines: categoriesT('wines'),
+  }
+
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
-      <Categories />
+      <Categories translations={categoriesTranslations} />
       <TopSellingProducts />
       <Offers />
     </main>

@@ -1,77 +1,84 @@
 'use client'
+
 import { useState } from 'react'
 import { cn } from '../../../../lib/utils'
 import { ScrollArea, ScrollBar } from '../ui/scroll-area'
 
-// Category type definition
 type Category = {
   id: number
   name: string
   image: string
 }
 
-// Professional categories with image URLs
-const categories: Category[] = [
-  {
-    id: 1,
-    name: 'All',
-    image: '/images/categories/all.avif',
-  },
-  {
-    id: 2,
-    name: 'Aloe Vera',
-    image: '/images/categories/aloe_vera.avif',
-  },
-  {
-    id: 3,
-    name: 'Dulces',
-    image: '/images/categories/dulces.avif',
-  },
-  {
-    id: 4,
-    name: 'Gofio',
-    image: '/images/categories/gofio.avif',
-  },
-  {
-    id: 5,
-    name: 'Bebidas',
-    image: '/images/categories/bebidas.avif',
-  },
-  {
-    id: 6,
-    name: 'Salsas',
-    image: '/images/categories/mojo.avif',
-  },
-  {
-    id: 7,
-    name: 'Papas y batatas',
-    image: '/images/categories/papas_y_batatas.avif',
-  },
-  {
-    id: 8,
-    name: 'Ron y Licores',
-    image: '/images/categories/ron_y_licores.avif',
-  },
-  {
-    id: 9,
-    name: 'Quesos',
-    image: '/images/categories/quesos.avif',
-  },
-  {
-    id: 10,
-    name: 'Vinos',
-    image: '/images/categories/vinos.avif',
-  },
-]
+type CategoriesProps = {
+  translations: {
+    title: string
+    allCategories: string
+    aloeVera: string
+    sweets: string
+    gofio: string
+    drinks: string
+    sauces: string
+    potatoesAndSweetPotatoes: string
+    rumAndLiquors: string
+    cheeses: string
+    wines: string
+  }
+}
 
-const Categories = () => {
+const Categories = ({ translations }: CategoriesProps) => {
   const [activeCategory, setActiveCategory] = useState(1)
+
+  const categories: Category[] = [
+    {
+      id: 1,
+      name: translations.allCategories,
+      image: '/images/categories/all.avif',
+    },
+    {
+      id: 2,
+      name: translations.aloeVera,
+      image: '/images/categories/aloe_vera.avif',
+    },
+    {
+      id: 3,
+      name: translations.sweets,
+      image: '/images/categories/dulces.avif',
+    },
+    { id: 4, name: translations.gofio, image: '/images/categories/gofio.avif' },
+    {
+      id: 5,
+      name: translations.drinks,
+      image: '/images/categories/bebidas.avif',
+    },
+    { id: 6, name: translations.sauces, image: '/images/categories/mojo.avif' },
+    {
+      id: 7,
+      name: translations.potatoesAndSweetPotatoes,
+      image: '/images/categories/papas_y_batatas.avif',
+    },
+    {
+      id: 8,
+      name: translations.rumAndLiquors,
+      image: '/images/categories/ron_y_licores.avif',
+    },
+    {
+      id: 9,
+      name: translations.cheeses,
+      image: '/images/categories/quesos.avif',
+    },
+    {
+      id: 10,
+      name: translations.wines,
+      image: '/images/categories/vinos.avif',
+    },
+  ]
 
   return (
     <div className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-8 font-display text-3xl font-bold">
-          Browse Categories
+          {translations.title}
         </h2>
         <ScrollArea className="w-full whitespace-nowrap">
           <div className="flex space-x-6 pb-6">
