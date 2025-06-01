@@ -1,11 +1,27 @@
 {
   "home_page": {
-    "meta_title": "Home - DcWine",
-    "meta_description": "Welcome to DcWine, your trusted platform to discover and purchase the finest wines, directly from the best wineries.",
+    "meta_title": "Home - Sabor Volcánico",
+    "meta_description": "The best selection of Canarian food, ready to share and enjoy. Discover the authentic flavors of our islands, prepared with tradition and love, and available wherever you are.",
     "header": {
-      "title": "DCWine",
-      "subtitle": "Great wine is great art, my friend. And DCWine is indeed a shepherd... whose mission is to offer the public another form of great art and guide their appreciation.",
-      "button": "Shop Now"
+      "title": "Authentic flavors of the Canary Islands",
+      "subtitle": "A little piece of the Canary Islands",
+      "subtitle2": "wherever you are",
+      "description": "The best selection of Canarian food, ready to share and enjoy. Discover the authentic flavors of our islands, prepared with tradition and love, and available wherever you are.",
+      "products_button": "Explore products",
+      "about_us_button": "About Us"
+    },
+    "categories": {
+      "title": "Categories",
+      "allCategories": "All Categories",
+      "aloeVera": "Aloe Vera",
+      "sweets": "Sweets",
+      "gofio": "Gofio",
+      "drinks": "Drinks",
+      "sauces": "Sauces",
+      "potatoesAndSweetPotatoes": "Potatoes",
+      "rumAndLiquors": "Rum And Liquors",
+      "cheeses": "Cheeses",
+      "wines": "Wines"
     },
     "top_selling_products": {
       "title": "Discover our top selling products",
