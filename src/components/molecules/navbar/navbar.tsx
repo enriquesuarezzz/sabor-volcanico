@@ -46,7 +46,7 @@ export default function NavBar({ translations }: NavBarProps) {
   const formattedTotalPrice = totalPrice.toFixed(2)
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 border-b bg-white bg-opacity-95 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}

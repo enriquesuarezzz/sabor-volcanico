@@ -91,7 +91,9 @@ export default async function RootLayout({
     `,
         }}
       />
-      <body className={`${BarlowText.variable} ${geistMono.variable}`}>
+      <body
+        className={`${BarlowText.variable} ${geistMono.variable} flex min-h-screen flex-col`}
+      >
         <NextIntlClientProvider messages={messages}>
           <CartProvider>
             <Navbar translations={navbarTranslations} />

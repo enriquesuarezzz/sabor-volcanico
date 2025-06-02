@@ -53,7 +53,7 @@ const LocaleSwitcher = () => {
           </div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
+      <DropdownMenuContent align="end" className="w-40 bg-white">
         {locales.map((locale) => (
           <DropdownMenuItem
             key={locale.code}

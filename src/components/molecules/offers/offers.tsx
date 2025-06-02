@@ -1,6 +1,6 @@
 'use client'
 import { getTranslations } from 'next-intl/server'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
+
 import { Link } from '@/i18n/routing'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
@@ -8,13 +8,13 @@ import { toast } from '../ui/use-toast'
 
 export default function Offers() {
   return (
-    <div className="bg-white py-16">
+    <div className="relative z-10 bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-8 font-display text-3xl font-bold">
           Exclusive Offers
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Card className="overflow-hidden border-0 bg-gradient-to-br from-food-secondary to-teal-600 text-white shadow-xl">
+          <Card className="border-0 bg-gradient-to-br from-food-secondary to-teal-600 text-white shadow-xl">
             <CardContent className="flex flex-col items-center justify-between p-8 md:flex-row">
               <div>
                 <h3 className="mb-3 font-display text-2xl font-bold">
@@ -48,7 +48,7 @@ export default function Offers() {
             </CardContent>
           </Card>
 
-          <Card className="overflow-hidden border-0 bg-gradient-to-br from-food-primary to-red-600 text-white shadow-xl">
+          <Card className="border-0 bg-gradient-to-br from-food-primary to-red-600 text-white shadow-xl">
             <CardContent className="flex flex-col items-center justify-between p-8 md:flex-row">
               <div>
                 <h3 className="mb-3 font-display text-2xl font-bold">
