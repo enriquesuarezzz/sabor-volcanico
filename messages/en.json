@@ -25,10 +25,15 @@
     },
     "top_selling_products": {
       "title": "Discover our top selling products",
-      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
-      "dark_wine": "Red Wine",
-      "white_wine": "White Wine",
-      "exotic_wine": "Sparkling Wine"
+      "button_text": "View all",
+      "product_1": "Gofio la Abuela",
+      "product_1_category": "Gofio",
+      "product_2": "Clipper",
+      "product_2_category": "Drinks",
+      "product_3": "Queso de cabra",
+      "product_3_category": "Cheeses",
+      "product_4": "Vino Volcánico",
+      "product_4_category": "Wines"
     },
     "features": {
       "feature_1": {
