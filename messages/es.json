@@ -24,11 +24,16 @@
       "wines": "Vinos"
     },
     "top_selling_products": {
-      "title": "Descubre nuestros productos más vendidos",
-      "subtitle": "lorem ipsum dolor sit amet consectetur adipiscing elit",
-      "dark_wine": "Vino tinto",
-      "white_wine": "Vino blanco",
-      "exotic_wine": "Vinos Rosados"
+      "title": "Discover our top selling products",
+      "button_text": "View all",
+      "product_1": "Gofio la Abuela",
+      "product_1_category": "Gofios",
+      "product_2": "Clipper",
+      "product_2_category": "Bebidas",
+      "product_3": "Queso de cabra",
+      "product_3_category": "Quesos",
+      "product_4": "Vino Volcánico",
+      "product_4_category": "Vinos"
     },
     "features": {
       "feature_1": {
