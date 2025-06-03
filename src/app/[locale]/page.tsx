@@ -16,6 +16,7 @@ export async function generateMetadata() {
 export default async function HomePage() {
   const ageVerificationT = await getTranslations('age_verification_pop_up')
   const categoriesT = await getTranslations('home_page.categories')
+  const offersT = await getTranslations('home_page.offers')
 
   const categoriesTranslations = {
     title: categoriesT('title'),
@@ -30,13 +31,15 @@ export default async function HomePage() {
     cheeses: categoriesT('cheeses'),
     wines: categoriesT('wines'),
   }
-
+  const offersTranslations = {
+    title: offersT('title'),
+  }
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
       <Categories translations={categoriesTranslations} />
       <TopSellingProducts />
-      <Offers />
+      <Offers translations={offersTranslations} />
     </main>
   )
 }
