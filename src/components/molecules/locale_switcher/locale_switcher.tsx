@@ -49,7 +49,6 @@ const LocaleSwitcher = () => {
         >
           <div className="flex items-center space-x-1">
             <span className="text-base">{selectedLocale.flag}</span>
-            <Globe className="h-4 w-4" />
           </div>
         </Button>
       </DropdownMenuTrigger>
