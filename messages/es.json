@@ -35,17 +35,9 @@
       "product_4": "Vino Volcánico",
       "product_4_category": "Vinos"
     },
-    "features": {
-      "feature_1": {
-        "title": "DCWine, la Pasión",
-        "subtitle": "El vino se define como un producto cultural y histórico, algo que siempre ha estado presente en todas las áreas de nuestra vida, ya sea a través de la gastronomía, la agricultura o simplemente en los eventos más lúdicos. El origen del vino es muy antiguo y estrechamente ligado al desarrollo del hombre."
-      },
-      "feature_2": {
-        "title": "El Prosecco",
-        "subtitle": "Las colinas de Prosecco di Conegliano y Valdobbiadene han sido declaradas Patrimonio de la Humanidad por la UNESCO (7 de julio 2018) debido al excepcional valor universal del paisaje del Véneto, estas colinas representan el mundo del prosecco italiano: treinta kilómetros de pendientes empinadas cubiertas de viñedose."
-      }
-    },
-    "free_order_message": "🚚 Envíos gratis en todos los pedidos!"
+    "offers": {
+      "title": "Descubre nuestras ofertas"
+    }
   },
   "about_us_page": {
     "meta_title": "Sobre Nosotros - DcWine",

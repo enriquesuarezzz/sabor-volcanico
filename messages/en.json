@@ -35,17 +35,9 @@
       "product_4": "Vino Volcánico",
       "product_4_category": "Wines"
     },
-    "features": {
-      "feature_1": {
-        "title": "DCWine, the Passion",
-        "subtitle": "Wine is defined as a cultural and historical product, something that has always been present in all areas of our lives, whether through gastronomy, agriculture or simply in the most recreational events. The origin of wine is very ancient and closely linked to the development of man. Present in all civilizations. Wine is also connected to the idea of ​​celebrating; an event, a moment, a special date, an achievement, a reunion, a love. "
-      },
-      "feature_2": {
-        "title": "El Prosecco",
-        "subtitle": "The hills of Prosecco di Conegliano and Valdobbiadene have been declared a World Heritage Site by UNESCO (July 7, 2018) due to the exceptional universal value of the Veneto landscape, these hills represent the world of Italian prosecco: thirty kilometers of steep slopes covered with vineyards, thanks to the climate and terrain that facilitate their production. Here Prosecco DeGiusti is born, a quality product, available in three variants."
-      }
-    },
-    "free_order_message": "🚚 Free Shipping on All Orders!"
+    "offers": {
+      "title": "Discover our offers"
+    }
   },
   "about_us_page": {
     "meta_title": "About Us - DcWine",

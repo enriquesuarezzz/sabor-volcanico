@@ -1,17 +1,19 @@
 'use client'
-import { getTranslations } from 'next-intl/server'
-
-import { Link } from '@/i18n/routing'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { toast } from '../ui/use-toast'
 
-export default function Offers() {
+type OffersProps = {
+  translations: {
+    title: string
+  }
+}
+export default function Offers({ translations }: OffersProps) {
   return (
     <div className="relative z-10 bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-8 font-display text-3xl font-bold">
-          Exclusive Offers
+          {translations.title}
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Card className="border-0 bg-gradient-to-br from-food-secondary to-teal-600 text-white shadow-xl">

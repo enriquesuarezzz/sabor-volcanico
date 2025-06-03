@@ -1,12 +1,11 @@
 'use client'
-
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { db } from '../../../../lib/firebaseConfig'
 import { collection, query, where, getDocs, orderBy } from 'firebase/firestore'
 import { useLocale } from 'next-intl'
-import SearchIcon from '@/components/atoms/svg/search'
 import { Close } from '@/components/atoms/svg/close'
+import { Search } from 'lucide-react'
 
 interface Product {
   id: string
@@ -136,7 +135,7 @@ const SearchBar = ({
               </button>
 
               <div className="absolute left-1 top-1/2 -translate-y-1/2 transform md:left-5">
-                <SearchIcon className="transition-all duration-300 hover:scale-110" />
+                <Search className="transition-all duration-300 hover:scale-110" />
               </div>
             </div>
 
@@ -182,7 +181,7 @@ const SearchBar = ({
           className="rounded-full p-2"
           aria-label="Open Search"
         >
-          <SearchIcon className="transition-all duration-300 hover:scale-110" />
+          <Search className="transition-all duration-300 hover:scale-110" />
         </button>
       )}
     </div>
