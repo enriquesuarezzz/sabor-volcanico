@@ -181,7 +181,7 @@ const SearchBar = ({
           className="rounded-full p-2"
           aria-label="Open Search"
         >
-          <Search className="transition-all duration-300 hover:scale-110" />
+          <Search className="size-4 transition-all duration-300 hover:scale-110" />
         </button>
       )}
     </div>
