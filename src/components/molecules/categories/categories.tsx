@@ -43,34 +43,34 @@ const Categories = ({ translations }: CategoriesProps) => {
     {
       id: 3,
       name: translations.sweets,
-      image: '/images/categories/dulces.avif',
+      image: '/images/categories/sweets.avif',
     },
     { id: 4, name: translations.gofio, image: '/images/categories/gofio.avif' },
     {
       id: 5,
       name: translations.drinks,
-      image: '/images/categories/bebidas.avif',
+      image: '/images/categories/drinks.avif',
     },
     { id: 6, name: translations.sauces, image: '/images/categories/mojo.avif' },
     {
       id: 7,
       name: translations.potatoesAndSweetPotatoes,
-      image: '/images/categories/papas_y_batatas.avif',
+      image: '/images/categories/potatoes.avif',
     },
     {
       id: 8,
       name: translations.rumAndLiquors,
-      image: '/images/categories/ron_y_licores.avif',
+      image: '/images/categories/rum_and_licors.avif',
     },
     {
       id: 9,
       name: translations.cheeses,
-      image: '/images/categories/quesos.avif',
+      image: '/images/categories/cheeses.avif',
     },
     {
       id: 10,
       name: translations.wines,
-      image: '/images/categories/vinos.avif',
+      image: '/images/categories/wines.avif',
     },
   ]
 
