@@ -2,33 +2,38 @@
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { toast } from '../ui/use-toast'
+import Image from 'next/image'
 
 type OffersProps = {
   translations: {
     title: string
   }
 }
+
 export default function Offers({ translations }: OffersProps) {
   return (
-    <div className="relative z-10 bg-white py-16">
+    <div className="relative z-10 py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-8 font-display text-3xl font-bold">
+        <h2 className="mb-12 font-display text-4xl font-bold text-food-dark">
           {translations.title}
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Card className="border-0 bg-gradient-to-br from-food-secondary to-teal-600 text-white shadow-xl">
-            <CardContent className="flex flex-col items-center justify-between p-8 md:flex-row">
-              <div>
-                <h3 className="mb-3 font-display text-2xl font-bold">
-                  Free Delivery
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+          {/* Offer 1 */}
+          <Card className="rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-lg">
+            <CardContent className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between">
+              <div className="flex-1">
+                <h3 className="mb-2 font-display text-2xl font-semibold text-food-primary">
+                  🚚 Free Delivery
                 </h3>
-                <p className="mb-5 text-lg opacity-90">
+                <p className="mb-4 text-gray-700">
                   On your first order with code{' '}
-                  <span className="font-semibold">WELCOME</span>
+                  <span className="font-semibold text-food-secondary">
+                    WELCOME
+                  </span>
                 </p>
                 <Button
-                  variant="secondary"
-                  className="bg-white font-medium text-food-secondary hover:bg-white/90"
+                  variant="outline"
+                  className="rounded-full border-food-secondary text-food-secondary transition hover:bg-food-secondary/10"
                   onClick={() => {
                     navigator.clipboard.writeText('WELCOME')
                     toast({
@@ -37,31 +42,32 @@ export default function Offers({ translations }: OffersProps) {
                     })
                   }}
                 >
-                  Get Code
+                  Copy Code
                 </Button>
               </div>
-              <div className="mt-6 md:mt-0">
-                <img
-                  src="https://images.unsplash.com/photo-1526367790999-0feddd4dba51?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300"
-                  alt="Delivery service"
-                  className="h-32 w-32 rounded-full border-4 border-white/30 object-cover"
-                />
-              </div>
+              <Image
+                src="/images/categories/drinks.avif"
+                alt="Drinks offer"
+                width={112}
+                height={112}
+                className="h-28 w-28 rounded-full border-4 border-food-secondary object-cover shadow-sm"
+              />
             </CardContent>
           </Card>
 
-          <Card className="border-0 bg-gradient-to-br from-food-primary to-red-600 text-white shadow-xl">
-            <CardContent className="flex flex-col items-center justify-between p-8 md:flex-row">
-              <div>
-                <h3 className="mb-3 font-display text-2xl font-bold">
-                  20% Off Desserts
+          {/* Offer 2 */}
+          <Card className="rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-lg">
+            <CardContent className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between">
+              <div className="flex-1">
+                <h3 className="mb-2 font-display text-2xl font-semibold text-food-primary">
+                  🍰 20% Off Desserts
                 </h3>
-                <p className="mb-5 text-lg opacity-90">
+                <p className="mb-4 text-gray-700">
                   Every weekend, limited time offer!
                 </p>
                 <Button
-                  variant="secondary"
-                  className="bg-white font-medium text-food-primary hover:bg-white/90"
+                  variant="outline"
+                  className="rounded-full border-food-primary text-food-primary transition hover:bg-food-primary/10"
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   }
@@ -69,13 +75,13 @@ export default function Offers({ translations }: OffersProps) {
                   Order Now
                 </Button>
               </div>
-              <div className="mt-6 md:mt-0">
-                <img
-                  src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&h=300"
-                  alt="Dessert special"
-                  className="h-32 w-32 rounded-full border-4 border-white/30 object-cover"
-                />
-              </div>
+              <Image
+                src="/images/categories/sweets.avif"
+                alt="Desserts offer"
+                width={112}
+                height={112}
+                className="h-28 w-28 rounded-full border-4 border-food-primary object-cover shadow-sm"
+              />
             </CardContent>
           </Card>
         </div>
