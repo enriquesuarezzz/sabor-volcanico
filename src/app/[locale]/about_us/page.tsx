@@ -24,7 +24,7 @@ export default async function AboutUs() {
           {t('title')}
         </Playfair_DisplayText>
         <BarlowText fontSize="14px" className="max-w-[500px] text-center">
-          {t('subtitle')}
+          {t('description')}
         </BarlowText>
       </div>
       <div className="w-full">
@@ -36,7 +36,43 @@ export default async function AboutUs() {
           className="h-full max-h-[650px] w-full object-cover"
         />
       </div>
-      <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-16">
+      <section className="mt-10 flex w-full items-center justify-center bg-[#f6f3ed] px-6 py-16">
+        <div className="flex w-full max-w-6xl flex-col items-center md:flex-row md:items-center">
+          {/* Text Content */}
+          <div className="mb-10 text-center md:mb-0 md:w-1/2 md:text-left">
+            <Playfair_DisplayText
+              fontSize="22px"
+              className="pb-1 uppercase text-gray-700"
+            >
+              {t('first_section_title')}
+            </Playfair_DisplayText>
+            <Playfair_DisplayText
+              fontSize="14px"
+              style="bold"
+              className="pb-4 uppercase text-gray-700"
+            >
+              {t('first_section_subtitle')}
+            </Playfair_DisplayText>
+            <BarlowText fontSize="14px" className="uppercase text-gray-600">
+              {t('first_section_description')}
+            </BarlowText>
+          </div>
+
+          {/* Image */}
+          <div className="flex justify-center md:w-1/2">
+            <div className="relative h-64 w-96 overflow-hidden rounded shadow-md">
+              <Image
+                src="/images/categories/all.avif"
+                alt="Dish"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-16">
         <BarlowText fontSize="16px" className="">
           <span
             dangerouslySetInnerHTML={{
@@ -65,7 +101,7 @@ export default async function AboutUs() {
             __html: t('last_paragraph'),
           }}
         />
-      </BarlowText>
+      </BarlowText> */}
     </section>
   )
 }
