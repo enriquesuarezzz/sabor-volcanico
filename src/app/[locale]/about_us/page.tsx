@@ -1,5 +1,6 @@
 import { BarlowText } from '@/components/atoms/barlow_text'
 import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
+import Advantages from '@/components/molecules/advantages/advantages'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
@@ -72,15 +73,15 @@ export default async function AboutUs() {
         </div>
       </section>
 
-      {/* <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-16">
-        <BarlowText fontSize="16px" className="">
+      <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-16">
+        <BarlowText fontSize="16px" className="w-[50%]">
           <span
             dangerouslySetInnerHTML={{
               __html: t('first_paragraph'),
             }}
           />
         </BarlowText>
-        <BarlowText fontSize="16px" className="">
+        <BarlowText fontSize="16px" className="w-[50%]">
           <span
             dangerouslySetInnerHTML={{
               __html: t('second_paragraph'),
@@ -88,20 +89,7 @@ export default async function AboutUs() {
           />
         </BarlowText>
       </div>
-      <Image
-        src="/images/about_us_image_1.avif"
-        alt="bottle of wine glass of wine and grapes on a table"
-        width={1920}
-        height={600}
-        className="h-full max-h-[600px] w-full object-cover px-0 pt-10 md:px-20 md:pt-16"
-      />
-      <BarlowText fontSize="16px" className="mx-4 pt-10 md:mx-20 md:pt-16">
-        <span
-          dangerouslySetInnerHTML={{
-            __html: t('last_paragraph'),
-          }}
-        />
-      </BarlowText> */}
+      <Advantages />
     </section>
   )
 }
