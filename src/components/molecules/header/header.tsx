@@ -3,6 +3,7 @@ import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/routing'
+import Image from 'next/image'
 
 export default async function Header() {
   const t = await getTranslations('home_page.header')
@@ -52,8 +53,10 @@ export default async function Header() {
           </div>
           <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">
             <div className="relative mx-auto w-full overflow-hidden rounded-lg shadow-xl lg:max-w-lg">
-              <img
-                src="images/header_image.jpg"
+              <Image
+                width={1920}
+                height={1080}
+                src="/images/header_image.avif"
                 alt="Delicious gourmet food"
                 className="h-auto w-full rounded-lg object-cover"
               />
