@@ -26,32 +26,28 @@ export default async function TopSellingProducts() {
           {[
             {
               name: t('product_1'),
-              image:
-                'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400',
+              image: '/images/categories/gofio.avif',
               rating: 4.8,
 
               category: t('product_1_category'),
             },
             {
               name: t('product_2'),
-              image:
-                'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400',
+              image: '/images/categories/drinks.avif',
               rating: 4.7,
 
               category: t('product_2_category'),
             },
             {
               name: t('product_3'),
-              image:
-                'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400',
+              image: '/images/categories/cheeses.avif',
               rating: 4.9,
 
               category: t('product_3_category'),
             },
             {
               name: t('product_4'),
-              image:
-                'https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400',
+              image: '/images/categories/wines.avif',
               rating: 4.6,
 
               category: t('product_4_category'),
