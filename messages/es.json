@@ -24,8 +24,8 @@
       "wines": "Vinos"
     },
     "top_selling_products": {
-      "title": "Discover our top selling products",
-      "button_text": "View all",
+      "title": "Descubre nuestros productos más vendidos",
+      "button_text": "Ver todos",
       "product_1": "Gofio la Abuela",
       "product_1_category": "Gofios",
       "product_2": "Clipper",
@@ -46,7 +46,7 @@
     "description": "With years of experience and an unparalleled passion for good taste, we've become the go-to for those seeking quality, expert advice, and a unique experience. From classic wines to undiscovered gems, here, wine is enjoyed from the moment you choose it.",
     "first_section_title": "Lorem ipsum dolor sit amet consectetur",
     "first_section_subtitle": "adipiscing elit suspendisse dictum",
-    "first_section_description": " vivamus auctor hac nisi quis netus fermentum placerat nullam, varius nibh aliquam luctus molestie ullamcorper morbi vitae. Pretium nibh ante primis suscipit accumsan phasellus massa dapibus nisi, varius semper neque nascetur ullamcorper",
+    "first_section_description": " vivamus auctor hac nisi quis netus fermentum placerat nullam, varius nibh aliquam luctus molestie ullamcorper morbi vitae. Pretium nibh ante primis suscipit accumsan phasellus massa dapibus nisi, varius semper neque nascetur ullamcorper  Pretium nibh ante primis suscipit accumsan phasellus massa dapibus nisi, varius semper neque nascetur ullamcorper  Pretium nibh ante primis suscipit accumsan phasellus massa dapibus nisi, varius semper neque nascetur ullamcorper",
     "first_paragraph": "Lorem ipsum dolor sit amet consectetur adipiscing, elit scelerisque pretium integer vehicula at, elementum senectus dictum quam vivamus. Convallis diam penatibus aliquam nec eleifend blandit mi, felis at arcu cubilia ultrices posuere, lacus dui metus fringilla parturient consequat. Nulla elementum curabitur mi lectus nullam augue, ultrices hac eu praesent.",
     "second_paragraph": "Lorem ipsum dolor sit amet consectetur adipiscing, elit scelerisque pretium integer vehicula at, elementum senectus dictum quam vivamus. Convallis diam penatibus aliquam nec eleifend blandit mi, felis at arcu cubilia ultrices posuere, lacus dui metus fringilla parturient consequat. Nulla elementum curabitur mi lectus nullam augue, ultrices hac eu praesent. Leo orci facilisi ut integer per iaculis pretium dui nam dignissim, cum porttitor imperdiet venenatis enim aptent sociis facilisis convallis lectus, molestie velit fermentum pellentesque litora vel fames curae volutpat.",
     "advantages": {
