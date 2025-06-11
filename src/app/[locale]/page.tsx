@@ -3,6 +3,7 @@ import Header from '@/components/molecules/header/header'
 import TopSellingProducts from '@/components/molecules/top_selling_products/top_selling_products'
 import { getTranslations } from 'next-intl/server'
 import Offers from '@/components/molecules/offers/offers'
+import Advantages from '@/components/molecules/advantages/advantages'
 
 export async function generateMetadata() {
   const t = await getTranslations('home_page')
@@ -39,6 +40,7 @@ export default async function HomePage() {
       <Header />
       <Categories translations={categoriesTranslations} />
       <TopSellingProducts />
+      <Advantages />
       <Offers translations={offersTranslations} />
     </main>
   )
