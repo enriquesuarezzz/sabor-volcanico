@@ -16,8 +16,8 @@ export async function generateMetadata() {
 export default async function AboutUs() {
   const t = await getTranslations('about_us_page')
   return (
-    <section className="flex w-full flex-col items-center justify-center">
-      <div className="flex w-full flex-col items-center justify-center gap-4 px-10 pb-10 pt-24 md:gap-8 md:pb-16 md:pt-10 lg:flex-row lg:gap-8">
+    <div className="flex w-full flex-col items-center justify-center">
+      <section className="flex w-full flex-col items-center justify-center gap-4 px-10 pb-10 pt-24 md:gap-8 md:pb-16 md:pt-10 lg:flex-row lg:gap-8">
         <Playfair_DisplayText
           fontSize="44px"
           style="bold"
@@ -28,7 +28,7 @@ export default async function AboutUs() {
         <BarlowText fontSize="14px" className="max-w-[500px] text-center">
           {t('description')}
         </BarlowText>
-      </div>
+      </section>
       <div className="w-full">
         <Image
           src="/images/about_us_header.avif"
@@ -38,7 +38,7 @@ export default async function AboutUs() {
           className="h-full max-h-[650px] w-full object-cover"
         />
       </div>
-      <div className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-14">
+      <section className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-14">
         <BarlowText fontSize="16px" className="w-[50%]">
           <span
             dangerouslySetInnerHTML={{
@@ -53,7 +53,7 @@ export default async function AboutUs() {
             }}
           />
         </BarlowText>
-      </div>
+      </section>
       <section className="mt-10 flex w-full items-center justify-center px-6 py-4">
         <div className="flex w-full max-w-6xl flex-col items-center md:flex-row md:items-center">
           {/* Text Content */}
@@ -86,11 +86,10 @@ export default async function AboutUs() {
                 className="rounded-lg object-cover"
               />
             </div>
-          </div>
+          </div>∫
         </div>
       </section>
-
       <Features />
-    </section>
+    </div>
   )
 }
