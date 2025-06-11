@@ -80,17 +80,16 @@ export default async function AboutUs() {
           <div className="flex justify-center md:w-1/2">
             <div className="relative h-[500px] w-[500px] overflow-hidden rounded shadow-md">
               <Image
-                src="/images/categories/all.avif"
+                src="/images/about_us_text_and_image_section.avif"
                 alt="Dish"
                 fill
-                style={{ objectFit: 'cover' }}
+                className="rounded-lg object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <Advantages />
       <Features />
     </section>
   )
