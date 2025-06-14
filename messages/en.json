@@ -10,6 +10,14 @@
       "products_button": "Explore products",
       "about_us_button": "About Us"
     },
+    "advantages": {
+      "advantage_1_title": "Lorem ipsum dolor sit amet",
+      "advantage_1_description": "consectetur adipiscing, elit scelerisque pretium integer",
+      "advantage_2_title": "Lorem ipsum dolor sit amet",
+      "advantage_2_description": "consectetur adipiscing, elit scelerisque pretium integer",
+      "advantage_3_title": "Lorem ipsum dolor sit amet",
+      "advantage_3_description": "consectetur adipiscing, elit scelerisque pretium integer"
+    },
     "categories": {
       "title": "Categories",
       "allCategories": "All Categories",
@@ -46,17 +54,10 @@
     "description": "At Sabor Volcánica, we share the rich flavors and traditions of the Canary Islands through carefully selected local products. From artisan gofio to handmade mojo sauces, every item tells a story of culture, taste, and island pride.",
     "first_paragraph": "From the heart of the Atlantic, at Sabor Volcánico we work with local producers from the Canary Islands to bring you an authentic selection of flavors that truly represent us. Our goal is to keep Canarian culinary tradition alive and share it with those who miss their homeland—or want to discover it for the first time. Every product in our shop is handpicked for its quality, origin, and unique taste.",
     "second_paragraph": "We believe in the value of artisanal work, in supporting small family-run businesses, and in preserving what makes our culture special. That’s why we’re not just selling food—we’re sharing history, identity, and a deep love for our islands. We want every package you open to feel like a little piece of the Canaries has arrived at your door.",
+    "third_paragraph": "Canarian cuisine is more than tradition — it’s identity, history, and pride. Our islands, blessed with a unique climate and geography, have created a rich culinary culture that blends the best of the land, the sea, and centuries of cultural influence. From the indigenous Guanches to African, Latin American, and European contributions, every traditional dish tells a story of fusion and evolution. <br/>In the Canary Islands, food isn’t just eaten — it’s shared, celebrated, and passed down through generations. Dishes like papas arrugadas with mojo picón, sancocho, kneaded gofio, or sweet bienmesabe are more than recipes; they’re family memories, village festivals, and moments around the table. Each flavor carries a piece of our volcanic land and our way of life. <br/><br/>At Sabor Volcánico, we want you to taste all of that in every bite. That’s why we carefully select authentic products, made with love by local producers who still craft food the traditional way — using natural ingredients and respectful methods. No matter where you are, we want you to open a package and feel the aroma of mojo, the texture of gofio, or the sweetness of Canarian bananas, as if you were right here, at home. <br/>We believe that by sharing our food, we’re sharing the Canary Islands. And that’s what drives us every day.",
     "first_section_title": "Flavors That Tell Stories",
     "first_section_subtitle": "Every product has deep roots",
-    "first_section_description": "Our products aren’t just delicious—they’re the result of generations of tradition and care. We work with small producers who keep family recipes and artisanal methods alive. When you choose our products, you’re supporting a truly authentic and sustainable way of life.",
-    "advantages": {
-      "advantage_1_title": "Lorem ipsum dolor sit amet",
-      "advantage_1_description": "consectetur adipiscing, elit scelerisque pretium integer",
-      "advantage_2_title": "Lorem ipsum dolor sit amet",
-      "advantage_2_description": "consectetur adipiscing, elit scelerisque pretium integer",
-      "advantage_3_title": "Lorem ipsum dolor sit amet",
-      "advantage_3_description": "consectetur adipiscing, elit scelerisque pretium integer"
-    }
+    "first_section_description": "Our products aren’t just delicious—they’re the result of generations of tradition and care. We work with small producers who keep family recipes and artisanal methods alive. When you choose our products, you’re supporting a truly authentic and sustainable way of life."
   },
   "navbar": {
     "home": "Home",
