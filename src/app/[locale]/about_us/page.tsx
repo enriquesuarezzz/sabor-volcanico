@@ -1,6 +1,5 @@
 import { BarlowText } from '@/components/atoms/barlow_text'
 import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
-import Features from '@/components/features/features'
 import Advantages from '@/components/molecules/advantages/advantages'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
@@ -86,10 +85,18 @@ export default async function AboutUs() {
                 className="rounded-lg object-cover"
               />
             </div>
-          </div>∫
+          </div>
         </div>
       </section>
-      <Features />
+      <section className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-14">
+        <BarlowText fontSize="16px">
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t('third_paragraph'),
+            }}
+          />
+        </BarlowText>
+      </section>
     </div>
   )
 }

@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link } from '@/i18n/routing'
-
 import Cart from '@/components/atoms/svg/cart'
 import Spanish from '@/components/atoms/svg/spanish'
 import English from '@/components/atoms/svg/english'
@@ -27,6 +26,7 @@ interface MobileMenuProps {
   }
   isCartOpen: boolean
   setIsCartOpen: (open: boolean) => void
+  onCloseMenu?: () => void // Optional: If you're using it now
 }
 
 export function MobileMenu({ translations, setIsCartOpen }: MobileMenuProps) {
