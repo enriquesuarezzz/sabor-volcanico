@@ -1,6 +1,5 @@
 import { BarlowText } from '@/components/atoms/barlow_text'
 import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
-import Advantages from '@/components/molecules/advantages/advantages'
 import { getTranslations } from 'next-intl/server'
 import Image from 'next/image'
 
@@ -15,11 +14,10 @@ export async function generateMetadata() {
 export default async function AboutUs() {
   const t = await getTranslations('about_us_page')
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="flex w-full flex-col items-center justify-center pt-4 md:pt-24">
       <section className="flex w-full flex-col items-center justify-center gap-4 px-10 pb-10 pt-24 md:gap-8 md:pb-16 md:pt-10 lg:flex-row lg:gap-8">
         <Playfair_DisplayText
           fontSize="44px"
-          style="bold"
           className="max-w-[900px] text-center lg:max-w-[700px]"
         >
           {t('title')}
@@ -37,7 +35,7 @@ export default async function AboutUs() {
           className="h-full max-h-[650px] w-full object-cover"
         />
       </div>
-      <section className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-14">
+      <section className="mx-4 flex gap-6 pt-10 md:mx-20 md:gap-10 md:pt-14">
         <BarlowText fontSize="16px" className="w-[50%]">
           <span
             dangerouslySetInnerHTML={{
@@ -53,7 +51,7 @@ export default async function AboutUs() {
           />
         </BarlowText>
       </section>
-      <section className="mt-10 flex w-full items-center justify-center px-6 py-4">
+      <section className="mx-4 mt-10 flex justify-center py-4 md:mx-20">
         <div className="flex w-full max-w-6xl flex-col items-center md:flex-row md:items-center">
           {/* Text Content */}
           <div className="mb-10 text-center md:mb-0 md:w-1/2 md:text-left">
@@ -77,10 +75,10 @@ export default async function AboutUs() {
 
           {/* Image */}
           <div className="flex justify-center md:w-1/2">
-            <div className="relative h-[500px] w-[500px] overflow-hidden rounded shadow-md">
+            <div className="relative h-[300px] w-[300px] overflow-hidden rounded shadow-md lg:h-[500px] lg:w-[500px]">
               <Image
-                src="/images/about_us_text_and_image_section.avif"
-                alt="Dish"
+                src="/images/about_us_image_1.avif"
+                alt="hands of a person making gofio"
                 fill
                 className="rounded-lg object-cover"
               />
@@ -88,14 +86,46 @@ export default async function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="mx-4 flex flex-col gap-6 pt-10 md:mx-20 md:flex-row md:gap-10 md:pt-14">
-        <BarlowText fontSize="16px">
-          <span
-            dangerouslySetInnerHTML={{
-              __html: t('third_paragraph'),
-            }}
-          />
-        </BarlowText>
+
+      <section className="mx-4 pt-10 md:mx-20 md:pt-14">
+        <div className="space-y-10">
+          {/* Top Text */}
+          <BarlowText
+            fontSize="20px"
+            className="text-lg leading-relaxed text-gray-800"
+          >
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t('third_paragraph'),
+              }}
+            />
+          </BarlowText>
+
+          {/* Image */}
+          <div className="flex w-full justify-center">
+            <div className="max-w-xl overflow-hidden rounded-xl shadow-md">
+              <Image
+                src="/images/about_us_image_2.avif"
+                width={800}
+                height={600}
+                alt="hands of a person making gofio"
+                className="h-auto w-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+
+          {/* Bottom Text */}
+          <BarlowText
+            fontSize="20px"
+            className="text-lg leading-relaxed text-gray-800"
+          >
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t('fourth_paragraph'),
+              }}
+            />
+          </BarlowText>
+        </div>
       </section>
     </div>
   )
