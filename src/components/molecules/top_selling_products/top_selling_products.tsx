@@ -11,11 +11,13 @@ export default async function TopSellingProducts() {
     <div className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-center justify-between">
-          <h2 className="font-display text-3xl font-bold">{t('title')}</h2>
+          <h2 className="font-display text-2xl font-bold md:text-3xl">
+            {t('title')}
+          </h2>
           <Link href="/products">
             <Button
               variant="outline"
-              className="border-food-primary text-food-primary hover:bg-food-primary/5"
+              className="text-md border-food-primary text-food-primary hover:bg-food-primary/5"
             >
               {t('button_text')}
             </Button>
@@ -74,7 +76,7 @@ export default async function TopSellingProducts() {
                 <h3 className="mb-1 font-display text-lg font-bold">
                   {product.name}
                 </h3>
-                <div className="flex items-center justify-between text-sm text-gray-500">
+                <div className="text-md flex items-center justify-between text-gray-500">
                   <span>{product.category}</span>
                 </div>
               </CardContent>
