@@ -22,20 +22,22 @@ export default async function Advantages() {
   ]
 
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 pt-16 md:flex-row md:gap-6 md:divide-x xl:gap-12">
+    <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 pt-0 md:flex-row md:gap-6 md:divide-x md:pt-16 xl:gap-12">
       {advantages.map((advantage, index) => (
         <div
           key={index}
           className={`flex items-start gap-4 md:flex-1 md:flex-col md:items-center md:px-4 lg:items-start ${
-            index !== 0 ? 'md:pl-6' : ''
+            index !== 0 ? 'md:pl-3' : ''
           }`}
         >
-          <CircleCheckBig className="text-dark-gray mt-1 shrink-0" />
-          <div className="flex flex-col text-start md:text-center lg:text-start">
-            <Playfair_DisplayText fontSize="32px" className="text-dark-gray">
-              {advantage.title}
-            </Playfair_DisplayText>
-            <BarlowText fontSize="14px" className="text-dark-gray mt-2">
+          <div className="ml-4 flex flex-col text-start md:text-center lg:text-start">
+            <div className="flex items-center gap-6">
+              <CircleCheckBig className="text-dark-gray mt-1 shrink-0" />
+              <Playfair_DisplayText fontSize="28px" className="text-dark-gray">
+                {advantage.title}
+              </Playfair_DisplayText>
+            </div>
+            <BarlowText fontSize="16px" className="text-dark-gray mt-2">
               {advantage.description}
             </BarlowText>
           </div>
