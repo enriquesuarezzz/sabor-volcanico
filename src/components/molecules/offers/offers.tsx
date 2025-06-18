@@ -12,15 +12,15 @@ type OffersProps = {
 
 export default function Offers({ translations }: OffersProps) {
   return (
-    <div className="relative z-10 py-20">
+    <div className="relative z-10 pb-4 pt-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-12 font-display text-4xl font-bold text-food-dark">
+        <h2 className="mb-12 font-display text-2xl font-bold text-food-dark md:text-3xl">
           {translations.title}
         </h2>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {/* Offer 1 */}
           <Card className="rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-lg">
-            <CardContent className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between">
+            <CardContent className="flex items-start justify-between gap-6 p-8">
               <div className="flex-1">
                 <h3 className="mb-2 font-display text-2xl font-semibold text-food-primary">
                   🚚 Free Delivery
@@ -57,7 +57,7 @@ export default function Offers({ translations }: OffersProps) {
 
           {/* Offer 2 */}
           <Card className="rounded-2xl border border-gray-100 bg-white shadow-md transition hover:shadow-lg">
-            <CardContent className="flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between">
+            <CardContent className="flex items-start justify-between gap-6 p-8">
               <div className="flex-1">
                 <h3 className="mb-2 font-display text-2xl font-semibold text-food-primary">
                   🍰 20% Off Desserts
