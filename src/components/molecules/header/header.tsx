@@ -8,10 +8,10 @@ import Image from 'next/image'
 export default async function Header() {
   const t = await getTranslations('home_page.header')
   return (
-    <div className="relative py-16 pt-40">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl pt-28 md:py-16 md:pt-32 lg:pt-40">
+      <div className="px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
-          <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
+          <div className="sm:text-center md:mx-auto lg:col-span-6 lg:text-left">
             <h1>
               <span className="mb-3 block text-base font-semibold uppercase tracking-wide text-canary-blue sm:text-lg lg:text-base xl:text-base">
                 {t('title')}

@@ -39,7 +39,7 @@ export const Playfair_DisplayText = forwardRef<
       className = 'text-black',
       leading = 'normal',
     },
-    ref, // Include the ref parameter here
+    ref,
   ) => {
     function getSize() {
       switch (fontSize) {
@@ -56,7 +56,7 @@ export const Playfair_DisplayText = forwardRef<
         case '22px':
           return 'text-[20px] md:text-[22px]'
         case '28px':
-          return 'text-[20px] md:text-[28px]'
+          return 'text-[20px] md:text-[20px] lg:text-[28px]'
         case '32px':
           return 'text-[22px] md:text-[26px] lg:text-[32px]'
         case '44px':

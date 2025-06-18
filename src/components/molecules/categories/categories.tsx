@@ -75,9 +75,9 @@ const Categories = ({ translations }: CategoriesProps) => {
   ]
 
   return (
-    <div className="bg-white py-12">
+    <div className="bg-white pt-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-8 font-display text-3xl font-bold">
+        <h2 className="mb-8 font-display text-3xl font-bold md:text-3xl">
           {translations.title}
         </h2>
         <ScrollArea className="w-full whitespace-nowrap">
@@ -115,7 +115,7 @@ const Categories = ({ translations }: CategoriesProps) => {
                   </div>
                   <span
                     className={cn(
-                      'text-sm font-medium',
+                      'text-md font-medium',
                       activeCategory === category.id
                         ? 'font-semibold text-food-primary'
                         : 'text-gray-600',
