@@ -11,7 +11,7 @@ export default async function TopSellingProducts() {
     <div className="bg-white py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex items-center justify-between">
-          <h2 className="font-display text-2xl font-bold md:text-3xl">
+          <h2 className="font-display text-xl font-bold md:text-3xl">
             {t('title')}
           </h2>
           <Link href="/products">
