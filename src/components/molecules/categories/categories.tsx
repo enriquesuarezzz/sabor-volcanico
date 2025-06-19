@@ -77,7 +77,7 @@ const Categories = ({ translations }: CategoriesProps) => {
   return (
     <div className="bg-white pt-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-8 font-display text-3xl font-bold md:text-3xl">
+        <h2 className="mb-8 font-display text-2xl font-bold md:text-3xl">
           {translations.title}
         </h2>
         <ScrollArea className="w-full whitespace-nowrap">
