@@ -3,8 +3,10 @@ import { useLocale } from 'next-intl'
 import Link from 'next/link'
 import { Product } from '../../../../types/products'
 import { getProducts } from '../../../../lib/firestore'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
+
 import { useEffect, useState } from 'react'
+import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 export default function Products({
   translations,
@@ -184,7 +186,7 @@ export default function Products({
                   alt={product.name}
                   className="mb-4 h-48 w-full rounded-md object-contain"
                 />
-                {/* <PoppinsText
+                <BarlowText
                   fontSize="12px"
                   className={`w-fit rounded-full px-3 py-1 text-white ${
                     product.category === 'red wine'
@@ -197,12 +199,14 @@ export default function Products({
                   }`}
                 >
                   {product.category}
-                </PoppinsText> */}
-                <PoppinsText fontSize="14px">{product.name}</PoppinsText>
-                <PoppinsText fontSize="14px">{product.price} €</PoppinsText>
-                <PoppinsText fontSize="12px" className="text-gray-600">
+                </BarlowText>
+                <Playfair_DisplayText fontSize="14px">
+                  {product.name}
+                </Playfair_DisplayText>
+                <BarlowText fontSize="14px">{product.price} €</BarlowText>
+                <BarlowText fontSize="12px" className="text-gray-600">
                   {product.origin} - {product.grape}
-                </PoppinsText>
+                </BarlowText>
               </Link>
             </div>
           ))
