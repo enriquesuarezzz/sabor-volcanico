@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale } from 'next-intl'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import { getProductById } from '../../../../../lib/firestore'
 import { Product } from '../../../../../types/products'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 export default function ProductDetails() {
   const pathname = usePathname()
@@ -63,11 +63,11 @@ export default function ProductDetails() {
   if (!product) {
     return (
       <div className="flex flex-col items-center justify-center pt-32 text-center">
-        <PoppinsText fontSize="28px" className="text-gray-900">
+        <BarlowText fontSize="28px" className="text-gray-900">
           {locale === 'en'
             ? 'The product you are looking for does not exist'
             : 'El producto que buscas no existe'}
-        </PoppinsText>
+        </BarlowText>
         <Image
           src="/images/404.avif"
           alt="404"
@@ -157,15 +157,15 @@ export default function ProductDetails() {
               className="h-16 w-16 rounded-md object-contain"
             />
             <div className="ml-4 flex flex-col">
-              <PoppinsText fontSize="14px" className="text-gray-900">
+              <BarlowText fontSize="14px" className="text-gray-900">
                 {toastMessage}
-              </PoppinsText>
-              <PoppinsText
+              </BarlowText>
+              <BarlowText
                 fontSize="14px"
                 className="font-semibold text-gray-900"
               >
                 {product?.name}
-              </PoppinsText>
+              </BarlowText>
             </div>
             <p className="ml-auto font-bold text-gray-900">{product?.price}€</p>
           </div>
@@ -173,7 +173,7 @@ export default function ProductDetails() {
 
         {/* Left Section - Product Name & Characteristics */}
         <div className="flex w-full flex-col gap-1 pt-0 md:w-1/3 md:pt-20">
-          {/* <PoppinsText
+          <BarlowText
             fontSize="12px"
             className={`w-fit rounded-full px-3 py-1 text-white ${
               product.category === 'red wine'
@@ -186,35 +186,33 @@ export default function ProductDetails() {
             }`}
           >
             {product.category}
-          </PoppinsText> */}
-          <PoppinsText fontSize="28px" className="mt-2 font-bold">
+          </BarlowText>
+          <BarlowText fontSize="28px" className="mt-2 font-bold">
             {product.name}
-          </PoppinsText>
+          </BarlowText>
 
           <div className="flex flex-col gap-2">
-            <PoppinsText fontSize="16px">
-              Alcohol: {product.alcohol}
-            </PoppinsText>
-            <PoppinsText fontSize="16px">
+            <BarlowText fontSize="16px">Alcohol: {product.alcohol}</BarlowText>
+            <BarlowText fontSize="16px">
               {locale === 'en'
                 ? `Cellar: ${product.cellar}`
                 : `Bodega: ${product.cellar}`}
-            </PoppinsText>
-            <PoppinsText fontSize="16px">
+            </BarlowText>
+            <BarlowText fontSize="16px">
               {locale === 'en'
                 ? `Grape: ${product.grape}`
                 : `Uva: ${product.grape}`}
-            </PoppinsText>
-            <PoppinsText fontSize="16px">
+            </BarlowText>
+            <BarlowText fontSize="16px">
               {locale === 'en'
                 ? `Origin: ${product.origin}`
                 : `Origen: ${product.origin}`}
-            </PoppinsText>
-            <PoppinsText fontSize="16px">
+            </BarlowText>
+            <BarlowText fontSize="16px">
               {locale === 'en'
                 ? `Size: ${product.size}`
                 : `Tamaño: ${product.size}`}
-            </PoppinsText>
+            </BarlowText>
           </div>
         </div>
 
@@ -237,9 +235,9 @@ export default function ProductDetails() {
                 window.open(pdfUrl, '_blank')
               }}
             >
-              <PoppinsText fontSize="14px" className="text-white">
+              <BarlowText fontSize="14px" className="text-white">
                 {locale === 'es' ? 'Ficha técnica' : 'Technical sheet'}
-              </PoppinsText>
+              </BarlowText>
             </button>
           )}
         </div>
@@ -260,22 +258,22 @@ export default function ProductDetails() {
                 <span className="rounded-full bg-red-100 px-3 py-1 text-red-800">
                   {locale === 'en' ? 'Out of Stock' : 'Agotado'}
                 </span>
-                <PoppinsText
+                <BarlowText
                   fontSize="16px"
                   className="text-center font-semibold text-red-700"
                 >
                   {locale === 'en'
                     ? 'Sorry, this product is currently unavailable.'
                     : 'Lo sentimos, este producto no está disponible actualmente.'}
-                </PoppinsText>
+                </BarlowText>
               </div>
             )}
           </div>
           {/* Quantity Selector */}
           <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
-            <PoppinsText fontSize="16px" className="text-center">
+            <BarlowText fontSize="16px" className="text-center">
               {locale === 'en' ? 'Select Quantity' : 'Selecciona una cantidad'}
-            </PoppinsText>
+            </BarlowText>
             <div className="flex items-center gap-2">
               <button
                 className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
@@ -283,7 +281,7 @@ export default function ProductDetails() {
               >
                 -
               </button>
-              <PoppinsText fontSize="16px">{quantity}</PoppinsText>
+              <BarlowText fontSize="16px">{quantity}</BarlowText>
               <button
                 className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
                 onClick={() => handleQuantityChange('increment')}
@@ -293,9 +291,9 @@ export default function ProductDetails() {
               </button>
             </div>
 
-            <PoppinsText fontSize="20px" className="font-bold">
+            <BarlowText fontSize="20px" className="font-bold">
               {product.price}€
-            </PoppinsText>
+            </BarlowText>
           </div>
           <button
             onClick={handleAddToCart}
@@ -306,9 +304,9 @@ export default function ProductDetails() {
             }`}
             disabled={product.stock === 0 || quantity > product.stock}
           >
-            <PoppinsText fontSize="16px" className="text-white">
+            <BarlowText fontSize="16px" className="text-white">
               {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
-            </PoppinsText>
+            </BarlowText>
           </button>
         </div>
       </div>
@@ -326,23 +324,23 @@ export default function ProductDetails() {
             <span className="rounded-full bg-red-100 px-3 py-1 text-red-800">
               {locale === 'en' ? 'Out of Stock' : 'Agotado'}
             </span>
-            <PoppinsText
+            <BarlowText
               fontSize="16px"
               className="text-center font-semibold text-red-700"
             >
               {locale === 'en'
                 ? 'Sorry, this product is currently unavailable.'
                 : 'Lo sentimos, este producto no está disponible actualmente.'}
-            </PoppinsText>
+            </BarlowText>
           </div>
         )}
       </div>
       {/* Quantity Selector for mobile */}
       <div className="flex flex-col items-center gap-1 pt-2 md:hidden md:pt-10 lg:w-1/3">
         <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
-          <PoppinsText fontSize="16px" className="text-center">
+          <BarlowText fontSize="16px" className="text-center">
             {locale === 'en' ? 'Select Quantity' : 'Selecciona una cantidad'}
-          </PoppinsText>
+          </BarlowText>
           <div className="flex items-center gap-2">
             <button
               className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
@@ -350,7 +348,7 @@ export default function ProductDetails() {
             >
               -
             </button>
-            <PoppinsText fontSize="16px">{quantity}</PoppinsText>
+            <BarlowText fontSize="16px">{quantity}</BarlowText>
             <button
               className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
               onClick={() => setQuantity((prev) => prev + 1)}
@@ -358,9 +356,9 @@ export default function ProductDetails() {
               +
             </button>
           </div>
-          <PoppinsText fontSize="20px" className="font-bold">
+          <BarlowText fontSize="20px" className="font-bold">
             {product.price}€
-          </PoppinsText>
+          </BarlowText>
         </div>
         {/* Add to Cart Button */}
         <div className="flex flex-col items-center gap-1 md:flex lg:w-1/3">
@@ -373,9 +371,9 @@ export default function ProductDetails() {
             }`}
             disabled={product.stock === 0}
           >
-            <PoppinsText fontSize="16px" className="text-white">
+            <BarlowText fontSize="16px" className="text-white">
               {locale === 'en' ? 'Add to Cart' : 'Añadir al Carrito'}
-            </PoppinsText>
+            </BarlowText>
           </button>
         </div>
       </div>
