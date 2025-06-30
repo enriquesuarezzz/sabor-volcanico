@@ -15,7 +15,6 @@ export async function generateMetadata() {
 }
 
 export default async function HomePage() {
-  const ageVerificationT = await getTranslations('age_verification_pop_up')
   const categoriesT = await getTranslations('home_page.categories')
   const offersT = await getTranslations('home_page.offers')
 

@@ -17,11 +17,9 @@ export default function Products({
   const [products, setProducts] = useState<Product[]>([])
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([])
   const [sortOrder, setSortOrder] = useState<string>('') // State for sorting products
-  // const [selectedCategory, setSelectedCategory] = useState<string>('') // State for category filter
+  const [selectedCategory, setSelectedCategory] = useState<string>('') // State for category filter
   const [selectedOrigin, setSelectedOrigin] = useState<string>('') // State for origin filter
   const [selectedGrape, setSelectedGrape] = useState<string>('') // State for grape  filter
-  const [origins, setOrigins] = useState<string[]>([]) // State to store unique origins
-  const [grape, setGrape] = useState<string[]>([]) // State to store unique grape types
   const [loading, setLoading] = useState<boolean>(true) // State to store loading state
 
   useEffect(() => {
@@ -31,17 +29,6 @@ export default function Products({
         const data = await getProducts() // Fetch products from Firestore
         setProducts(data)
         setFilteredProducts(data)
-
-        // Extract unique origins from the products and set them in the state
-        const uniqueOrigins = [
-          ...new Set(data.map((product) => product.origin)),
-        ]
-        setOrigins(uniqueOrigins)
-
-        // Extract unique grape types from the products and set them in the state
-        const uniquegrapes = [...new Set(data.map((product) => product.grape))]
-        setGrape(uniquegrapes)
-        setLoading(false)
       }
     }
     fetchProducts()
@@ -50,14 +37,14 @@ export default function Products({
   useEffect(() => {
     let updatedProducts = [...products]
 
-    // // ✅ Filter by category
-    // if (selectedCategory) {
-    //   updatedProducts = updatedProducts.filter(
-    //     (product) =>
-    //       product.category?.trim().toLowerCase() ===
-    //       selectedCategory.trim().toLowerCase(),
-    //   )
-    // }
+    // ✅ Filter by category
+    if (selectedCategory) {
+      updatedProducts = updatedProducts.filter(
+        (product) =>
+          product.category?.trim().toLowerCase() ===
+          selectedCategory.trim().toLowerCase(),
+      )
+    }
 
     // ✅ Filter by origin
     if (selectedOrigin) {
@@ -92,7 +79,6 @@ export default function Products({
       {/* Sidebar */}
       <aside className="w-full pr-0 md:pr-10 lg:w-1/4">
         <h2 className="mb-4 text-lg font-bold">{translations.filters}</h2>
-
         {/* Sort Dropdown */}
         <div className="mb-4">
           <label className="block text-sm font-medium">
@@ -108,8 +94,7 @@ export default function Products({
             <option value="desc">{translations.high_to_low}</option>
           </select>
         </div>
-
-        {/* Category Dropdown
+        {/* Category Dropdown */}
         <div className="mb-4">
           <label className="block text-sm font-medium">
             {translations.category}
@@ -126,47 +111,8 @@ export default function Products({
               {translations.sparkling_wine}
             </option>
           </select>
-        </div> */}
-
-        {/* Origin Dropdown */}
-        <div className="mb-4">
-          <label className="block text-sm font-medium">
-            {translations.origin}
-          </label>
-          <select
-            className="mt-1 w-full rounded-md border p-2"
-            value={selectedOrigin}
-            onChange={(e) => setSelectedOrigin(e.target.value)}
-          >
-            <option value="">{translations.all_origins}</option>
-            {origins.map((origin, index) => (
-              <option key={index} value={origin}>
-                {origin}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Grape Type Dropdown */}
-        <div className="mb-4">
-          <label className="block text-sm font-medium">
-            {translations.grape_type}
-          </label>
-          <select
-            className="mt-1 w-full rounded-md border p-2"
-            value={selectedGrape}
-            onChange={(e) => setSelectedGrape(e.target.value)}
-          >
-            <option value="">{translations.all_grape_types}</option>
-            {grape.map((grape, index) => (
-              <option key={index} value={grape}>
-                {grape}
-              </option>
-            ))}
-          </select>
         </div>
       </aside>
-
       {/* Product Listing */}
       <div className="flex w-full flex-wrap items-center justify-center gap-20 md:gap-10 lg:w-3/4">
         {loading ? (
