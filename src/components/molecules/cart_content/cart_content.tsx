@@ -1,11 +1,11 @@
 'use client'
-
 import { useState, useEffect } from 'react'
-import { PoppinsText } from '@/components/atoms/playfair_display_text'
 import Delete from '@/components/atoms/svg/delete'
 import { useCart } from '@/components/molecules/cart_context/cart_context'
 import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { Playfair_DisplayText } from '@/components/atoms/playfair_display_text'
+import { BarlowText } from '@/components/atoms/barlow_text'
 
 interface CartContentProps {
   translations: {
@@ -51,31 +51,27 @@ const CartContent = ({ translations }: CartContentProps) => {
   return (
     <div className="mx-4 flex flex-col justify-between gap-4 pt-24 md:px-10 lg:mx-24 lg:flex-row lg:gap-20 lg:px-4 lg:pt-32">
       <div className="w-full p-1 md:p-6 lg:w-2/3">
-        <PoppinsText fontSize="28px" style="bold" className="pb-10">
+        <Playfair_DisplayText fontSize="28px" style="bold" className="pb-10">
           {translations.title}
-        </PoppinsText>
+        </Playfair_DisplayText>
 
         {clientCart.length === 0 ? (
           <div className="mt-10 flex justify-center">
-            <PoppinsText fontSize="16px" style="bold">
+            <BarlowText fontSize="16px" style="bold">
               {translations.empty}
-            </PoppinsText>
+            </BarlowText>
           </div>
         ) : (
           <div className="w-full">
             <div className="grid grid-cols-12 border-b pb-2 text-center">
               <div className="col-span-6 text-left">
-                <PoppinsText fontSize="22px">
-                  {translations.product}
-                </PoppinsText>
+                <BarlowText fontSize="22px">{translations.product}</BarlowText>
               </div>
               <div className="col-span-4">
-                <PoppinsText fontSize="22px">
-                  {translations.quantity}
-                </PoppinsText>
+                <BarlowText fontSize="22px">{translations.quantity}</BarlowText>
               </div>
               <div className="col-span-2">
-                <PoppinsText fontSize="22px">{translations.price}</PoppinsText>
+                <BarlowText fontSize="22px">{translations.price}</BarlowText>
               </div>
             </div>
             {clientCart.map((item) => (
@@ -89,7 +85,7 @@ const CartContent = ({ translations }: CartContentProps) => {
                     alt={item.name}
                     className="max-h-[50px] rounded-md object-cover md:max-h-[100px]"
                   />
-                  <PoppinsText fontSize="19px">{item.name}</PoppinsText>
+                  <BarlowText fontSize="19px">{item.name}</BarlowText>
                 </div>
                 <div className="col-span-4 flex flex-col items-center gap-1 md:gap-2">
                   <div className="flex items-center gap-2">
@@ -99,7 +95,7 @@ const CartContent = ({ translations }: CartContentProps) => {
                     >
                       -
                     </button>
-                    <PoppinsText fontSize="16px">{item.quantity}</PoppinsText>
+                    <BarlowText fontSize="16px">{item.quantity}</BarlowText>
                     <button
                       className="rounded bg-gray-300 px-2 py-1 text-black hover:bg-gray-400"
                       onClick={() => increaseQuantity(item.id)}
@@ -112,15 +108,15 @@ const CartContent = ({ translations }: CartContentProps) => {
                     onClick={() => removeFromCart(item.id)}
                   >
                     <Delete />
-                    <PoppinsText fontSize="16px" className="text-red-500">
+                    <BarlowText fontSize="16px" className="text-red-500">
                       {translations.remove}
-                    </PoppinsText>
+                    </BarlowText>
                   </button>
                 </div>
                 <div className="col-span-2 text-center">
-                  <PoppinsText fontSize="19px">
+                  <BarlowText fontSize="19px">
                     {item.price.toFixed(2)} €
-                  </PoppinsText>
+                  </BarlowText>
                 </div>
               </div>
             ))}
@@ -130,30 +126,28 @@ const CartContent = ({ translations }: CartContentProps) => {
 
       {clientCart.length > 0 && (
         <div className="w-full rounded-lg bg-white p-2 pt-4 md:p-10 lg:w-1/3 lg:p-6 lg:pt-10">
-          <PoppinsText fontSize="22px" style="bold">
+          <BarlowText fontSize="22px" style="bold">
             {translations.total}
-          </PoppinsText>
+          </BarlowText>
 
           <div className="mt-4 flex justify-between">
-            <PoppinsText fontSize="16px">{translations.subtotal}</PoppinsText>
-            <PoppinsText fontSize="16px">{subtotal.toFixed(2)} €</PoppinsText>
+            <BarlowText fontSize="16px">{translations.subtotal}</BarlowText>
+            <BarlowText fontSize="16px">{subtotal.toFixed(2)} €</BarlowText>
           </div>
 
           <div className="mt-2 flex justify-between">
-            <PoppinsText fontSize="16px">{translations.shipping}</PoppinsText>
-            <PoppinsText fontSize="16px">
-              {shippingCost.toFixed(2)} €
-            </PoppinsText>
+            <BarlowText fontSize="16px">{translations.shipping}</BarlowText>
+            <BarlowText fontSize="16px">{shippingCost.toFixed(2)} €</BarlowText>
           </div>
 
           <div className="mt-2 flex justify-between">
-            <PoppinsText fontSize="16px">IGIC (7%)</PoppinsText>
-            <PoppinsText fontSize="16px">{igic.toFixed(2)} €</PoppinsText>
+            <BarlowText fontSize="16px">IGIC (7%)</BarlowText>
+            <BarlowText fontSize="16px">{igic.toFixed(2)} €</BarlowText>
           </div>
 
           <div className="mt-4 flex justify-between border-t pt-4 font-bold">
-            <PoppinsText fontSize="16px">{translations.total}</PoppinsText>
-            <PoppinsText fontSize="16px">{total.toFixed(2)} €</PoppinsText>
+            <BarlowText fontSize="16px">{translations.total}</BarlowText>
+            <BarlowText fontSize="16px">{total.toFixed(2)} €</BarlowText>
           </div>
 
           <button
