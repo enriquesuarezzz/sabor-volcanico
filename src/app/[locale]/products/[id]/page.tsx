@@ -18,25 +18,6 @@ export default function ProductDetails() {
   const [quantity, setQuantity] = useState(1)
   const [showToast, setShowToast] = useState(false)
   const [toastMessage, setToastMessage] = useState('')
-  const [hasTechnicalSheet, setHasTechnicalSheet] = useState(false)
-
-  useEffect(() => {
-    async function checkTechnicalSheet() {
-      if (product?.id) {
-        try {
-          const response = await fetch(
-            `https://brgtigvjaxugtmbaaadp.supabase.co/storage/v1/object/public/technicalsheets/${product.id}.pdf`,
-            { method: 'HEAD' },
-          )
-          setHasTechnicalSheet(response.ok)
-        } catch {
-          setHasTechnicalSheet(false)
-        }
-      }
-    }
-
-    checkTechnicalSheet()
-  }, [product?.id])
 
   useEffect(() => {
     async function fetchProduct() {
@@ -192,27 +173,7 @@ export default function ProductDetails() {
           </BarlowText>
 
           <div className="flex flex-col gap-2">
-            <BarlowText fontSize="16px">Alcohol: {product.alcohol}</BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Cellar: ${product.cellar}`
-                : `Bodega: ${product.cellar}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Grape: ${product.grape}`
-                : `Uva: ${product.grape}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Origin: ${product.origin}`
-                : `Origen: ${product.origin}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Size: ${product.size}`
-                : `Tamaño: ${product.size}`}
-            </BarlowText>
+            <BarlowText fontSize="16px"> {product.description}</BarlowText>
           </div>
         </div>
 
@@ -225,21 +186,6 @@ export default function ProductDetails() {
               className="max-h-[200px] rounded-md object-contain md:max-w-[250px] lg:max-h-[250px]"
             />
           </div>
-          {/* technical sheet button */}
-          {hasTechnicalSheet && (
-            <button
-              type="button"
-              className="mx-2 mt-4 w-full rounded bg-gray-700 py-2 text-white hover:bg-gray-900"
-              onClick={() => {
-                const pdfUrl = `https://brgtigvjaxugtmbaaadp.supabase.co/storage/v1/object/public/technicalsheets/${product.id}.pdf`
-                window.open(pdfUrl, '_blank')
-              }}
-            >
-              <BarlowText fontSize="14px" className="text-white">
-                {locale === 'es' ? 'Ficha técnica' : 'Technical sheet'}
-              </BarlowText>
-            </button>
-          )}
         </div>
 
         {/* Right Section - Price & Quantity Selector */}
