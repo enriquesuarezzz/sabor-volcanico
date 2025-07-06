@@ -3,11 +3,8 @@ export interface Product {
   name: string
   category: string
   price: number
-  grape: string
-  origin: string
-  alcohol: string
+  description: string
   size: string
   imageUrl: string
-  cellar: string
   stock: number
 }

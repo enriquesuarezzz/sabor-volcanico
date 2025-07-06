@@ -173,27 +173,7 @@ export default function ProductDetails() {
           </BarlowText>
 
           <div className="flex flex-col gap-2">
-            <BarlowText fontSize="16px">Alcohol: {product.alcohol}</BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Cellar: ${product.cellar}`
-                : `Bodega: ${product.cellar}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Grape: ${product.grape}`
-                : `Uva: ${product.grape}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Origin: ${product.origin}`
-                : `Origen: ${product.origin}`}
-            </BarlowText>
-            <BarlowText fontSize="16px">
-              {locale === 'en'
-                ? `Size: ${product.size}`
-                : `Tamaño: ${product.size}`}
-            </BarlowText>
+            <BarlowText fontSize="16px"> {product.description}</BarlowText>
           </div>
         </div>
 
